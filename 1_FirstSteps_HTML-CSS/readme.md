@@ -1,0 +1,18 @@
+auto-rename-tag v0.1.2
+  better-comments v2.0.5
+  bracket-pair-colorizer v1.0.61
+  code-settings-sync v3.4.3
+  gitlens v10.2.1
+  html-css-class-completion v1.19.0
+  html-snippets v0.2.1
+  JavaScriptSnippets v1.8.0
+  LiveServer v5.6.1
+  npm-intellisense v1.3.0
+  path-intellisense v1.4.2
+  polacode v0.3.4
+  prettier-vscode v4.5.0
+  project-manager v10.12.0
+  vscode-browser-preview v0.6.7
+  vscode-css-peek v3.0.2
+  vscode-eslint v2.1.5
+  vscode-icons v10.1.1
