@@ -141,3 +141,10 @@ td:hover {
 input:focus {
   background: cornflowerblue;
 }
+p {
+  transition: all ease 1s;
+}
+p:hover {
+  background-color: darkcyan;
+  transform: rotate(5deg) scale(2) translate(500px);
+}
