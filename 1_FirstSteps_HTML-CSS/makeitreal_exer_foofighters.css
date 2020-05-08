@@ -1,0 +1,75 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+header.main {
+  /**Stablish the image into the header*/
+  background: url('https://s3.amazonaws.com/makeitreal/foo/main.jpg') no-repeat center center;
+  background-size: cover;
+  height: 300px;
+}
+
+/* Utility classes */
+.row {
+  /** Applied to the nav*/
+  width: 992px; /*? define a constant width to avoid the text or the images touch the border */
+  margin: auto; /*? center row with the specified dimensions */
+}
+
+.nav {
+  float: right; /*? allows to allocate the text near the text*/
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 30px; /** margin from top of nav*/
+}
+.logo-square {
+  width: 160px;
+  border: 5px solid white;
+  margin-top: -70px;
+}
+
+.logo {
+  width: 250px;
+  vertical-align: top;
+  margin-top: 10px; /** margin from top of nav*/
+  margin-left: 30px; /** space between list items*/
+}
+
+.nav li {
+  float: left; /*? allows to allocate the list items horizontally*/
+  margin-left: 30px; /** margin from top of nav*/
+  list-style: none; /*? remove the points in the list*/
+}
+
+.content {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  background: #f0f0f0;
+  margin-top: -30px; /*! this line move the content 30px to the nav. then the nav is height is reduced 30px*/
+  padding: 50px; /*! after the margin-top, this line return the content 20px under the original position*/
+}
+
+.post {
+  margin: 0 auto;
+  background: white;
+  margin-bottom: 50px;
+  width: 600px;
+}
+
+.post img {
+  width: 100%;
+}
+
+.post .post-body {
+  color: #444;
+  padding: 20px;
+}
+
+.post .post-footer {
+  color: #aaa;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-top: 1px solid #f0f0f0;
+}
