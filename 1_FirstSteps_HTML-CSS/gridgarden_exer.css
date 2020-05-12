@@ -1,0 +1,8 @@
+#garden {
+  display: grid;
+  height: 500px;
+  width: 500px;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  background-color: deepskyblue;
+}
