@@ -6,3 +6,37 @@
   grid-template-rows: 20% 20% 20% 20% 20%;
   background-color: deepskyblue;
 }
+.water {
+  background-color: blue;
+  grid-column-start: 4;
+}
+
+.plant {
+  grid-column-start: 3;
+  background-color: green;
+}
+
+.plant2 {
+  grid-column-start: 1;
+  background-color: greenyellow;
+}
+.plant3 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+
+  grid-row-start: 3;
+  background-color: hotpink;
+}
+
+.plant4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column-start: 4;
+  grid-column-end: 6;
+
+  grid-row-start: 4;
+  grid-row-end: 6;
+
+  background-color: indianred;
+}
