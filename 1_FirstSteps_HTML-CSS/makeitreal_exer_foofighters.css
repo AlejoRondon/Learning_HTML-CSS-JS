@@ -8,6 +8,7 @@ header.main {
   background: url('https://s3.amazonaws.com/makeitreal/foo/main.jpg') no-repeat center center;
   background-size: cover;
   height: 300px;
+  /* position: fixed; */
 }
 
 /* Utility classes */
@@ -23,10 +24,25 @@ header.main {
   font-weight: 600;
   margin-top: 30px; /** margin from top of nav*/
 }
+
+a {
+  text-decoration: none;
+  background: linear-gradient(to right, orange, purple);
+  background-position: 100% 100%; /*? x: 0 todo en y,Al final del elemento */
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size 0.3s;
+}
+a:hover,
+a:focus {
+  /* background-size: 100% 2px; */
+  background-size: 100% 20%;
+}
 .logo-square {
   width: 160px;
   border: 5px solid white;
   margin-top: -70px;
+  /* position: fixed; */
 }
 
 .logo {

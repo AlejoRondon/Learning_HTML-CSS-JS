@@ -46,7 +46,7 @@ p.important {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100px 100px;
-  background-image: url("https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png");
+  background-image: url('https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png');
   background-attachment: fixed;
 }
 #specialDiv2 {
@@ -55,7 +55,7 @@ p.important {
   width: 500px;
   background-size: 100px 100px;
   background-color: darkslateblue;
-  background-image: url("https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png");
+  background-image: url('https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png');
   position: fixed;
   bottom: 100px;
   right: 300px;
@@ -69,7 +69,7 @@ p.important {
     width: 500px;
     background-size: 100px 100px;
     background-color: gold;
-    background-image: url("https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png");
+    background-image: url('https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png');
     position: fixed;
     bottom: 100px;
     right: 300px;
@@ -86,7 +86,7 @@ p.important {
 }
 
 .gradient {
-  background: linear-gradient(to right, red 10%, orange 20%, yellow 30%, blue);
+  background-image: linear-gradient(to right, purple 10%, orange 20%, yellow 30%, blue);
   height: 250px;
 }
 
