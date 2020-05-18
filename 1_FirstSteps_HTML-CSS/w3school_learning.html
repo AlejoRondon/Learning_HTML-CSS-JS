@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="HTML, CSS, XML, JavaScript">
+    <meta name="author" content="John Doe">
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <link href="w3school_learning.css" rel="stylesheet" />
+    <script src="w3school_learning.js">
+    </script>
+
+  </head>
+  <body >
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>23-Media</h3>
+      <video width="320" height="240" controls>
+        <track src="" kind="" srclang="" label="">
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+      </video>
+      <audio controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+      </audio>
+      <iframe width="420" height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY">
+      </iframe>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>22-SVG</h3>
+      <svg width="100" height="100">
+        <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+      </svg>
+      <svg width="400" height="100">
+        <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+      </svg>
+      <svg width="400" height="180">
+        <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+        style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+      </svg>
+      <svg width="300" height="200">
+        <polygon points="100,10 40,198 190,78 10,78 160,198"
+        style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+      </svg>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>21-Canvas</h3>
+      <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000; background-color: white;">
+      </canvas>
+      <button onclick="drawLine()">draw line</button>
+      <button onclick="drawCircle()">draw circle</button>
+
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>20-Forms-Input types</h3>
+      <form>
+        <label for="fname">text</label><input type="text" id="fname" name="fname" placeholder="cosas" required ><br> 
+        <label for="pwd">Password</label> <input type="password" id="pwd" name="pwd"><br>
+        <input type="radio" id="male" name="gender" value="male"><label for="male">Radio</label><br>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"><label for="vehicle1">checkbox</label><br>
+        <label for="favcolor">Select your favorite color</label><input type="color" id="favcolor" name="favcolor"><br>
+        <label for="birthday">date</label><input type="date" id="birthday" name="birthday"><br>
+        <label for="birthdaytime">date and time</label><input type="datetime-local" id="birthdaytime" name="birthdaytime"><br>
+        <label for="email">email</label><input type="email" id="email" name="email"><br>
+        <label for="myfile">Select a file</label><input type="file" id="myfile" name="myfile"><br>
+        <label for="bdaymonth">Birthday (month and year)</label><input type="month" id="bdaymonth" name="bdaymonth"><br>
+        <label for="quantity">number (between 1 and 5)</label><input type="number" id="quantity" name="quantity" min="1" max="5"><br>
+        <label for="vol">input range (between 0 and 50)</label><input type="range" id="vol" name="vol" min="0" max="50"><br>
+        <label for="gsearch">search</label><input type="search" id="gsearch" name="gsearch"><br>
+        <label for="phone">tel</label><input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+        <label for="appt">time</label><input type="time" id="appt" name="appt"><br>
+        <label for="homepage">url</label><input type="url" id="homepage" name="homepage"><br>
+        <label for="week">week</label><input type="week" id="week" name="week"><br>
+        <label for="country_code">Country code(read tooltip)</label><input type="text" id="country_code" name="country_code"pattern="[A-Za-z]{3}" title="Three letter country code"> <br>
+        <label for="phone">Enter a phone number(place holder):</label><input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br>
+        <input type="image" src="https://cdn2.iconfinder.com/data/icons/lucid-generic/24/fly_send_paper_submit_plane-512.png" alt="Submit" width="48" height="48">
+        
+        <input type="button" onClick="alert('Hello World!')" value="button">
+        <input type="submit" value="Submit">
+        <input type="reset">
+      </form>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>19-Forms</h3>
+      <form>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br>
+        <input type="submit" value="Submit">
+      </form>
+      <hr>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label><br>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label><br>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label>
+      <hr>
+      <form>
+        <h4>input type="text"</h4>
+        <input type="text" id="firstname" name="firstname">
+        <h4>&ltselect name="cars" size="4" multiple>&ltoption value="volvo">....</h4>
+        <select id="cars" name="cars" size="4" multiple style="width: 300px;">
+          <option value="1volvo">Volvo</option>
+          <option value="2saab">Saab</option>
+          <option value="3fiat">Fiat</option>
+          <option value="4audi">Audi</option>
+          <option value="5volvo">Volvo</option>
+          <option value="6saab">Saab</option>
+          <option value="7fiat">Fiat</option>
+          <option value="8audi">Audi</option>
+          <option value="9volvo">Volvo</option>
+          <option value="10saab">Saab</option>
+          <option value="11fiat">Fiat</option>
+          <option value="12audi">Audi</option>
+        </select><br>
+        <h4>text area</h4>
+        <textarea name="message" rows="10" cols="30">The cat was playing in the garden.
+        </textarea>
+        <textarea name="message" style="width:200px; height:200px;">The cat was playing in the garden.
+        </textarea>
+        <h4>button</h4>
+        <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+      </form>
+      <hr>
+      <form action="/action_page.php">
+        <h4>fieldset and legend</h4>
+        <fieldset>
+          <legend>Personalia:</legend>
+          <label for="fname">First name:</label><br>
+          <input type="text" id="fname" name="fname" value="John"><br>
+          <label for="lname">Last name:</label><br>
+          <input type="text" id="lname" name="lname" value="Doe"><br><br>
+          <input type="submit" value="Submit">
+        </fieldset>
+      </form>
+      <hr>
+      <h4>Data list</>
+      <form action="/action_page.php">
+        <input list="browsers">
+        <datalist id="browsers">
+          <option value="Internet Explorer">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>
+      </form>
+      <hr>
+      <h4>&ltoutput> and range</h4>
+      <form action="/action_page.php"
+      oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+      <input type="range"  id="a" name="a" value="50">
+      100 +
+      <input type="number" id="b" name="b" value="50">
+      =
+      <output name="x" for="a b"></output>
+      <br><br>
+      <input type="submit">
+</form>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>18-Entidades, simbolos, emojis</h3>
+      <p>I will display &euro;</p>
+      <p>I will display &#8364;</p>
+      <p>I will display &#x20AC;</p>
+      <p style="font-size:48px">
+        &#128512; &#128516; &#128525; &#128151;
+      </p>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>17-Computer code</h3>
+      <h4>&ltkbd></kbd></h4>
+      <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+      <h4>&ltsamp></samp></h4>
+      <p>If you input wrong value, the program will return <samp>Error!</samp></p>
+      <h4>&ltcode></code></h4>  
+      <pre>
+        <code>
+        x = 5;
+        y = 6;
+        z = x + y;
+        </code>
+      </pre>
+      <h4>&ltvar></var></h4>
+      Einstein wrote: <var>E</var> = <var>mc</var><sup>2</sup>.
+
+    </div>
+    <div style="background-color: aquamarine;">
+        <h3>16-MediaQueries</h3>
+      <div class="left">
+        <p>Left Menu</p>
+      </div>
+
+      <div class="main">
+        <p>Main Content</p>
+      </div>
+
+      <div class="right">
+        <p>Right Content</p>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3 style="font-size:10vw">15-Responsive text</h3>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>14-My first JS</h3>
+      <button type="button"
+      onclick="document.getElementById('demo').innerHTML = Date()">
+      Click me to display Date and Time.</button>
+      <p id="demo"></p>
+      <hr>
+      <p>JavaScript can change the content of an HTML element:</p>
+      <button type="button" onclick="changeContent()">Click Me!</button>
+      <p id="demo2">This is a demonstration.</p>
+      <hr>
+      <button type="button" onclick="changeCss()">Change css of element</button>
+      <hr>
+      <p>Changing attributes</p>
+      <img id="myImage" src="https://2d6qxj3uqdaw38d6lk27l0ao-wpengine.netdna-ssl.com/wp-content/uploads/2013/02/iconmonstr-light-bulb-icon-470x470.png" width="200" height="200">
+      <p>
+      <button type="button" onclick="light(1)">Light On</button>
+      <button type="button" onclick="light(0)">Light Off</button>
+      </p>
+
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>13-iframes</h3>
+      <iframe src="https://cdn.bitdegree.org/learn/test-iframe.htm" style="border:none;" sandbox name="iframe_tutorial" height="200" width="300"></iframe>
+      <p><a href="https://www.google.com" target="iframe_tutorial">google.com</a></p>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>12-#id</h3>
+      <button onclick="countFunction()">Count</button>
+      <h1 id="myHeader">My Header with id <q>my Header</q></h1>
+      
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>11-Classes and first JS interaction</h3>
+      <button onclick="myFunction()">Change color</button>
+        <div class="cities">
+          <h2>London</h2>
+          <p>London is the capital of England.</p>
+        </div>
+        
+        <div class="cities">
+          <h2>Paris</h2>
+          <p>Paris is the capital of France.</p>
+        </div>
+        
+        <div class="cities">
+          <h2>Tokyo</h2>
+          <p>Tokyo is the capital of Japan.</p>
+        </div>
+    </div>
+    
+    <div style="background-color: aquamarine;">
+      <h3>10-Lists</h3>
+      <ul style="list-style-type:square;">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+      </ul>
+      <hr>
+      <ol>
+        <li style="float: left; margin-left: 30px;">Coffee</li>
+        <li style="float: left; margin-left: 30px;">Tea</li>
+        <li style="float: left; margin-left: 30px;">Milk</li>
+      </ol>
+      <br><br>
+      <p>Description list</p>
+      <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+      </dl>
+      <h4>horizontal lists</h4>
+      <ul id="horizontal">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>9-Tables</h3>
+      <table style="width:100%">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td>Jill</td>
+          <td>Smith</td>
+          <td>50</td>
+        </tr>
+        <tr>
+          <td>Eve</td>
+          <td>Jackson</td>
+          <td>94</td>
+        </tr>
+        
+      </table>
+      <hr>
+      <table id="t01">
+        <caption>Bill Gates numbers</caption>
+        <tr>
+          <th>Name</th>
+          <th colspan="2">Telephone</th>
+        </tr>
+        <tr>
+          <td>Bill Gates 1</td>
+          <td>55577854</td>
+          <td>55577855</td>
+        </tr>
+        <tr>
+          <td>Bill Gates 2</td>
+          <td>55577854</td>
+          <td>55577855</td>
+        </tr>
+        <tr>
+          <td>Bill Gates 3</td>
+          <td>55577854</td>
+          <td>55577855</td>
+        </tr>
+      </table>
+      <hr>
+      <table style="width:100%">
+        <tr>
+          <th>Name:</th>
+          <td>Bill Gates</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Telephone:</th>
+          <td>55577854</td>
+        </tr>
+        <tr>
+          <td>55577855</td>
+        </tr>
+      </table>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3 id="C4">8-Images</h3>
+      <img src="https://image.flaticon.com/icons/png/512/25/25361.png" alt="Carita feliz" style="width:42px;height:42px;border:0;">
+      <img src="https://cdn1.iconfinder.com/data/icons/free-98-icons/32/sad-512.png" alt="Carita triste" style="width:42px;height:42px;border:0;">
+      <h4>float images</h4>  
+      <p><img src="https://image.flaticon.com/icons/png/512/25/25361.png" alt="Smiley face" style="float:right;width:42px;height:42px;">
+          The image will float to the right of the text.</p>
+      <hr>
+        <p><img src="https://image.flaticon.com/icons/png/512/25/25361.png" alt="Smiley face" style="float:left;width:42px;height:42px;">
+        The image will float to the left of the text.</p>
+        <img src="https://www.pc-campos.com/wp-content/uploads/2016/10/workplace-facebook-pccampos-e1497856600784.jpg" alt="Workplace" usemap="#workmap">
+      <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" title="computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+      </map>
+      <h3>picture element(image with embedded media queries)</h3>
+      <picture>
+        <source media="(min-width: 650px)" srcset="img_food.jpg">
+        <source media="(min-width: 465px)" srcset="img_car.jpg">
+        <img src="img_girl.jpg">
+      </picture>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>7-Links</h3>
+      <a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>
+      <pre>
+        The target attribute can have one of the following values:
+        _blank - Opens the linked document in a new window or tab
+        _self - Opens the linked document in the same window/tab as it was clicked (this is default)
+        _parent - Opens the linked document in the parent frame
+        _top - Opens the linked document in the full body of the window
+        framename - Opens the linked document in a named frame
+      </pre>
+      <a href="https://www.facebook.com/David.Rondon.B" target="_blank">
+        <img src="https://image.flaticon.com/icons/png/512/25/25361.png" alt="HTML tutorial" style="width:42px;height:42px;border:0;">
+      </a>
+      <button onclick="document.location = 'default.asp'">HTML Tutorial</button>
+      <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Tooltiptext test</a>
+      <h4>styled link</h4>
+      <a id="colorized" href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Links looks like buttons</a>
+      <h4>Bookmark</h4>
+      <a href="w3school_learning.html#C4">Jump to Chapter 4</a>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>6-Colors</h3>
+      <h4>background-color</h4>
+      <h1 style="background-color:rgba(0,0,255,0.1);">Hello World</h1>
+      <h4>color</h4>
+      <h1 style="color:Tomato;">Hello World</h1>
+      <p style="color:DodgerBlue;">Lorem ipsum...</p>
+      <p style="color:MediumSeaGreen;">Ut wisi enim...</p>
+      <p style="background-color:Tomato;">Lorem ipsum...</p>
+      <h1 style="border:2px solid Tomato;">Hello World</h1>
+      <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+      <h4>border: 2px solid color</h4>
+      <h1 style="border:2px solid Violet;">Hello World</h1>
+      <h4>Mix</h4>
+      <h1 style="background-color:rgb(255, 99, 71);">...</h1>
+      <h1 style="background-color:#ff6347;">...</h1>
+      <h1 style="background-color:hsl(9, 100%, 64%);">...</h1>
+      <h1 style="background-color:rgba(255, 99, 71, 0.5);">...</h1>
+      <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">...</h1>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>5-Quotations</h3>
+      <h4>&ltq></h4>
+      <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+      <h4>&ltblockquote></h4>
+      <p>Here is a quote from WWF's website:</p>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature.
+        The world's leading conservation organization,
+        WWF works in 100 countries and is supported by
+        1.2 million members in the United States and
+        close to 5 million globally.</blockquote>
+        <h4>&ltabbreviation></h4>
+        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+        <h4>&ltaddress></h4>
+        <address>
+          Written by John Doe.<br>
+          Visit us at:<br>
+          Example.com<br>
+          Box 564, Disneyland<br>
+          USA
+          </address>
+          <h4>&ltcite></h4>
+          <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+          <h4>&ltbdo></h4>
+          <bdo dir="rtl">This text will be written from right to left</bdo>
+      </div>
+    <div style="background-color: aquamarine;">
+      <h3 id="C4">4-Formating</h3>
+      <pre>
+  
+          &ltb> - Bold text
+          &ltstrong> - Important text
+          &lti> - Italic text
+          &ltem> - Emphasized text
+          &ltmark> - Marked text
+          &ltsmall> - Small text
+          &ltdel> - Deleted text
+          &ltins> - Inserted text
+          &ltsub> - Subscript text
+          &ltsup> - Superscript text
+      </pre>
+      <p><b>This text is bold</b></p>
+      <p><strong>This text is strong</strong></p>
+      <p><em>This text is em, like italic but with sematic emphasis </em></p>
+      <p><i>This text is italic without extra importance</i></p>
+      <p><h2>HTML <small>Small</small> Formatting</h2></p>
+      <p><h2>HTML <mark>Marked</mark> Formatting</h2></p>
+      <p>My favorite color is <del>blue</del> red.</p>
+      <p>My favorite <ins>color</ins> is red.</p>
+      <p>This is <sub>subscripted</sub> text.</p>
+      <p>This is <sup>superscripted</sup> text.</p>
+      <hr />
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>3-style</h3>
+      <h4>color:</h4>
+      <h1 style="color: blue;">This is a heading</h1>
+      <p style="color: red;">This is a paragraph.</p>
+      <hr />
+      <h4>font-family:</h4>
+      <h1 style="font-family: verdana;">This is a heading</h1>
+      <p style="font-family: courier;">This is a paragraph.</p>
+      <hr />
+      <h4>font-size:</h4>
+      <h1 style="font-size: 300%;">This is a heading</h1>
+      <p style="font-size: 160%;">This is a paragraph.</p>
+      <hr />
+      <h4>text-align:</h4>
+      <h1 style="text-align: center;">Centered Heading</h1>
+      <p style="text-align: center;">Centered paragraph.</p>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>2-Paragraphs</h3>
+      <p>This is<br />a paragraph<br />with line breaks.</p>
+      <hr />
+      <pre>
+        Preformated text:
+
+        My Bonnie lies over the ocean.
+      
+        My Bonnie lies over the sea.
+      
+        My Bonnie lies over the ocean.
+      
+        Oh, bring back my Bonnie to me.
+      </pre>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>1-Heading tags</h3>
+      <h1>Heading1</h1>
+      <h2>Heading2</h2>
+      <h3>Heading3</h3>
+      <h4>Heading4</h4>
+      <h5>Heading5</h5>
+      <h6>Heading5</h6>
+    </div>
+  </body>
+</html>

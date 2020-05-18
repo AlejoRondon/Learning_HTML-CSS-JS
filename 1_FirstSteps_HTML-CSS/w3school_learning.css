@@ -1,0 +1,114 @@
+a#colorized:link,
+a#colorized:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a#colorized:hover,
+#colorized:active {
+  background-color: red;
+}
+
+table {
+  border-spacing: 5px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+th,
+td {
+  padding: 15px;
+}
+th {
+  text-align: left;
+}
+table#t01 {
+  width: 720px;
+  background-color: #f1f1c1;
+}
+table#t01 tr:nth-child(even) {
+  background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+  background-color: #fff;
+}
+table#t01 th {
+  color: white;
+  background-color: black;
+}
+
+ul#horizontal {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+ul#horizontal li {
+  float: left;
+}
+
+ul#horizontal li a {
+  display: block; /*Use completly the block*/
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none; /*? remove the line under the link*/
+}
+
+ul#horizontal li a:hover {
+  background-color: #111111;
+}
+
+.cities {
+  background-color: tomato;
+  color: white;
+  margin: 20px;
+  padding: 10px;
+}
+#myHeader {
+  background-color: silver;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+
+.left {
+  background-color: #2196f3;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+.main {
+  background-color: #f1f1f1;
+  padding: 20px;
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+}
+
+.right {
+  background-color: #4caf50;
+  padding: 20px;
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width: 800px) {
+  .left,
+  .main,
+  .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
