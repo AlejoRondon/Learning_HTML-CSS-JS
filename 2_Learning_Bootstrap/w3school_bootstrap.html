@@ -1,0 +1,2221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>XX-XXXX</h3>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>YY-YYYY</h3>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>XX-XXXX</h3>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>YY-YYYY</h3>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>29-Filters</h3>
+      <div class="container mt-3">
+        <h2>Filterable Table</h2>
+        <p>Type something in the input field to search the table for first names, last names or emails:</p>
+        <input class="form-control" id="myInput" type="text" placeholder="Search.." />
+        <br />
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="myTable">
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@mail.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@greatstuff.com</td>
+            </tr>
+            <tr>
+              <td>Anja</td>
+              <td>Ravendale</td>
+              <td>a_r@test.com</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Note that we start the search in tbody, to prevent filtering the table headers.</p>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $('#myInput').on('keyup', function () {
+            var value = $(this).val().toLowerCase()
+            $('#myTable tr').filter(function () {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            })
+          })
+        })
+      </script>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>28-Icons</h3>
+      <div class="container">
+        <p>Others:</p>
+        <i class="fas fa-cloud"></i>
+        <i class="fas fa-coffee"></i>
+        <i class="fas fa-car"></i>
+        <i class="fas fa-file"></i>
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>27-Scrollspy</h3>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#section1">Section 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section2">Section 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#section3">Section 3</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+              Section 4
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#section41">Link 1</a>
+              <a class="dropdown-item" href="#section42">Link 2</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div id="section1" class="container-fluid bg-success" style="padding-top: 70px; padding-bottom: 70px;">
+        <h1>Section 1</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+      </div>
+      <div id="section2" class="container-fluid bg-warning" style="padding-top: 70px; padding-bottom: 70px;">
+        <h1>Section 2</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+      </div>
+      <div id="section3" class="container-fluid bg-secondary" style="padding-top: 70px; padding-bottom: 70px;">
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+      </div>
+      <div id="section41" class="container-fluid bg-danger" style="padding-top: 70px; padding-bottom: 70px;">
+        <h1>Section 4 Submenu 1</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+      </div>
+      <div id="section42" class="container-fluid bg-info" style="padding-top: 70px; padding-bottom: 70px;">
+        <h1>Section 4 Submenu 2</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+      </div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>26-Toast</h3>
+      <div class="container">
+        <h3>Toast Example</h3>
+        <p>A toast is like an alert box that is only shown for a couple of seconds when something happens (i.e. when a user clicks on a button, submits a form, etc.).</p>
+        <p>In this example, we use a button to show the toast message.</p>
+
+        <button type="button" class="btn btn-primary" id="myBtn">Show Toast</button>
+
+        <div class="toast">
+          <div class="toast-header">
+            Toast Header
+          </div>
+          <div class="toast-body">
+            Some text inside the toast body
+          </div>
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $('#myBtn').click(function () {
+            $('.toast').toast('show')
+          })
+        })
+      </script>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>25-Popover</h3>
+      <div class="container">
+        <h3>Popover Example</h3>
+        <a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+      </div>
+
+      <script>
+        $(document).ready(function () {
+          $('[data-toggle="popover"]').popover()
+        })
+      </script>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>24-Tooltip</h3>
+      <div class="container">
+        <h3>Tooltip Example</h3>
+        <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+      </div>
+      <script>
+        $(document).ready(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+      </script>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>23-Modal</h3>
+      <div class="container">
+        <h2>Fading Modal</h2>
+        <p>Add the "fade" class to the modal container if you want the modal to fade in on open and fade out on close.</p>
+
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          Open modal
+        </button>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">Modal Heading</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                Modal body..
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Modal Scroll Example</h2>
+        <p>Use the .modal-dialog-scrollable class to enable scrolling inside the modal.</p>
+        <!-- Button to Open the Modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">
+          Open modal
+        </button>
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal2">
+          <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h1 class="modal-title">Modal Heading</h1>
+                <button type="button" class="close" data-dismiss="modal">×</button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <h3>Some text to enable scrolling..</h3>
+                <p>
+                  Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                  id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <p>
+                  Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                  id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+
+                <p>
+                  Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                  id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>22-Carousel</h3>
+      <div id="demo" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#demo" data-slide-to="0" class="active"></li>
+          <li data-target="#demo" data-slide-to="1"></li>
+          <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://s1.1zoom.me/big0/715/349078-Berserker.jpg" alt="Los Angeles" width="1100" height="500" />
+          </div>
+          <div class="carousel-item">
+            <img src="https://lh3.googleusercontent.com/proxy/go640hXxJMNAIcZckTOHAodw49pFUu4IR20g79M9tcb5lEl_c-nxFp5DdTVmXkwpXPOVwOUiGXELiIgiVpr74lToykVi921EV-rl2U2Qy68" alt="Chicago" width="1100" height="500" />
+          </div>
+          <div class="carousel-item">
+            <img src="https://s1.1zoom.me/big0/989/274234-blackangel.jpg" alt="New York" width="1100" height="500" />
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>21-Inputs</h3>
+      <div class="container">
+        <h2>Form control: input</h2>
+        <p>The form below contains two input elements; one of type text and one of type password:</p>
+        <form action="/action_page.php">
+          <div class="form-group">
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" id="usr" name="username" />
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" name="password" />
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label"> <input type="checkbox" class="form-check-input" value="" />Option 1 </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label"> <input type="checkbox" class="form-check-input" value="" />Option 2 </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label"> <input type="checkbox" class="form-check-input" value="" disabled />Option 3 </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label"> <input type="checkbox" class="form-check-input" value="" />Option 1 </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label"> <input type="checkbox" class="form-check-input" value="" />Option 2 </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label"> <input type="checkbox" class="form-check-input" value="" disabled />Option 3 </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" />Option 1 </label>
+          </div>
+          <div class="form-check">
+            <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" />Option 2 </label>
+          </div>
+          <div class="form-check disabled">
+            <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" disabled />Option 3 </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" />Option 1 </label>
+          </div>
+          <div class="form-check-inline">
+            <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" />Option 2 </label>
+          </div>
+          <div class="form-check-inline disabled">
+            <label class="form-check-label"> <input type="radio" class="form-check-input" name="optradio" disabled />Option 3 </label>
+          </div>
+          <div class="form-group">
+            <label for="sel1">Select list:</label>
+            <select class="form-control" id="sel1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+            </select>
+          </div>
+          <input type="text" class="form-control form-control-sm" />
+          <input type="text" class="form-control form-control" />
+          <input type="text" class="form-control form-control-lg" />
+          <input type="text" class="form-control-plaintext" value="textplain" />
+          <input type="range" class="form-control-range" />
+          <input type="file" class="form-control-file border" />
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">@</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Username" />
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Your Email" />
+            <div class="input-group-append">
+              <span class="input-group-text">@example.com</span>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Person</span>
+            </div>
+            <input type="text" class="form-control" placeholder="First Name" />
+            <input type="text" class="form-control" placeholder="Last Name" />
+          </div>
+        </form>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <button class="btn btn-outline-primary" type="button">Basic Button</button>
+          </div>
+          <input type="text" class="form-control" placeholder="Some text" />
+        </div>
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search" />
+          <div class="input-group-append">
+            <button class="btn btn-success" type="submit">Go</button>
+          </div>
+        </div>
+
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Something clever.." />
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button">OK</button>
+            <button class="btn btn-danger" type="button">Cancel</button>
+          </div>
+        </div>
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="customCheck" name="example1" />
+          <label class="custom-control-label" for="customCheck">Check this custom checkbox</label>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>20-Forms</h3>
+      <div class="container">
+        <h2>Stacked form</h2>
+        <form action="/action_page.php">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" />
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" />
+          </div>
+          <div class="form-group form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember" />
+              Remember me
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="container">
+        <h2>Inline form</h2>
+        <p>
+          Make the viewport larger than 576px wide to see that all of the form elements are inline and left-aligned. On small screens, the form groups will stack horizontally.
+        </p>
+        <form class="form-inline" action="/action_page.php">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" />
+          <label for="pwd">Password:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" />
+          <div class="form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember" />
+              Remember me
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+      <div class="container">
+        <h2>Inline form</h2>
+        <p>
+          Make the viewport larger than 576px wide to see that all of the form elements are inline and left-aligned. On small screens, the form groups will stack horizontally.
+        </p>
+        <form class="form-inline" action="/action_page.php">
+          <label for="email2" class="mb-2 mr-sm-2">Email:</label>
+          <input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Enter email" name="email" />
+          <label for="pwd2" class="mb-2 mr-sm-2">Password:</label>
+          <input type="text" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Enter password" name="pswd" />
+          <div class="form-check mb-2 mr-sm-2">
+            <label class="form-check-label">
+              <input type="checkbox" class="form-check-input" name="remember" />
+              Remember me
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+      </div>
+      <div class="container">
+        <h2>Form Validation(.was-validated)</h2>
+        <p>In this example, we use <code>.was-validated</code> to indicate what's missing before submitting the form:</p>
+        <form action="/action_page.php" class="was-validated">
+          <div class="form-group">
+            <label for="uname">Username:</label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required />
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required />
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+          </div>
+          <div class="form-group form-check">
+            <label class="form-check-label">
+              <input class="form-check-input" type="checkbox" name="remember" required />
+              I agree on blabla.
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">
+                Check this checkbox to continue.
+              </div>
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+        <div class="container">
+          <h2>Form Validation(.needs-validation)</h2>
+          <p>In this example, we use <code>.needs-validation</code>, which will add the validation effect AFTER the form has been submitting (if there's anything missing).</p>
+          <p>
+            Try to submit this form before filling out the input fields, to see the effect.
+          </p>
+          <form action="/action_page.php" class="needs-validation" novalidate>
+            <div class="form-group">
+              <label for="uname">Username:</label>
+              <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required />
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+              <label for="pwd">Password:</label>
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required />
+              <div class="valid-feedback">Valid.</div>
+              <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="remember" required />
+                I agree on blabla.
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">
+                  Check this checkbox to continue.
+                </div>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          <script>
+            // Disable form submissions if there are invalid fields
+            ;(function () {
+              'use strict'
+              window.addEventListener(
+                'load',
+                function () {
+                  // Get the forms we want to add validation styles to
+                  var forms = document.getElementsByClassName('needs-validation')
+                  // Loop over them and prevent submission
+                  var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener(
+                      'submit',
+                      function (event) {
+                        if (form.checkValidity() === false) {
+                          event.preventDefault()
+                          event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                      },
+                      false
+                    )
+                  })
+                },
+                false
+              )
+            })()
+          </script>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>19-Navbar</h3>
+      <div class="container">
+        <h3>Basic Navbar Example</h3>
+        <p>
+          A navigation bar is a navigation header that is placed at the top of the page.
+        </p>
+        <p>
+          The navbar-expand-xl|lg|md|sm class determines when the navbar should stack vertically (on extra large, large, medium or small screens).
+        </p>
+      </div>
+      <nav class="navbar navbar-expand-sm bg-light">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link 3</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <h3>Colored Navbar</h3>
+        <p>
+          Use any of the .bg-color classes to add a background color to the navbar.
+        </p>
+        <p>
+          Tip: Add a white text color to all links in the navbar with the .navbar-dark class, or use the .navbar-light class to add a black text color.
+        </p>
+      </div>
+
+      <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm bg-success navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm bg-warning navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm bg-danger navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navbar navbar-expand-sm bg-secondary navbar-dark">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <h3>Collapsible Navbar</h3>
+        <p>
+          In this example, the navigation bar is hidden on small screens and replaced by a button in the top right corner (try to re-size this window).
+        </p>
+        <p>
+          Only when the button is clicked, the navigation bar will be displayed.
+        </p>
+        <p>
+          Tip: You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.
+        </p>
+      </div>
+      <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br />
+
+      <div class="container">
+        <h3>Navbar Forms</h3>
+        <p>
+          Use the .form-inline class to align form elements side by side inside the navbar.
+        </p>
+      </div>
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <form class="form-inline" action="/action_page.php">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </nav>
+      <br />
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>18-Navs</h3>
+      <div class="container">
+        <h2>Nav</h2>
+        <p>Basic horizontal menu:</p>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>Nav</h2>
+        <p>Left-aligned nav (default):</p>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+
+        <p class="text-center">Centered nav:</p>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+
+        <p class="text-right">Right-aligned nav:</p>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>Vertical Nav</h2>
+        <p>Use the .flex-column class to create a vertical nav:</p>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>Navigation Tabs</h2>
+        <p>
+          Turn the nav menu into navigation tabs with the .nav nav-tabs class. Add the active class to the active/current link. If you want the tabs to be togglable, see the last example on the tutorial page.
+        </p>
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>Navigation Pills</h2>
+        <p>
+          Turn the nav menu into navigation pills with the .nav nav-pills class:
+        </p>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>Pills with Dropdown</h2>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Dropdown</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Link 1</a>
+              <a class="dropdown-item" href="#">Link 2</a>
+              <a class="dropdown-item" href="#">Link 3</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <h2>Toggleable Tabs</h2>
+        <br />
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a>
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div id="home" class="container tab-pane active">
+            <br />
+            <h3>HOME</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div id="menu1" class="container tab-pane fade">
+            <br />
+            <h3>Menu 1</h3>
+            <p>
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          <div id="menu2" class="container tab-pane fade">
+            <br />
+            <h3>Menu 2</h3>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>17-Collapsible</h3>
+      <div class="container">
+        <h2>Show Collapsible Content By Default</h2>
+        <p>
+          Add the show class next to the collapse class to show the content by default.
+        </p>
+        <p>Click on the button to toggle between showing and hiding content.</p>
+        <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#demo">
+          Simple collapsible
+        </button>
+        <div id="demo" class="collapse show">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+      </div>
+      <div class="container">
+        <h2>Accordion Example</h2>
+        <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <a class="card-link" data-toggle="collapse" href="#collapseOne">
+                Collapsible Group Item #1
+              </a>
+            </div>
+            <div id="collapseOne" class="collapse show" data-parent="#accordion">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                Collapsible Group Item #2
+              </a>
+            </div>
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                Collapsible Group Item #3
+              </a>
+            </div>
+            <div id="collapseThree" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>16-Dropdown</h3>
+      <div class="container">
+        <h2>Dropdowns</h2>
+        <p>The .dropdown class is used to indicate a dropdown menu.</p>
+        <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+        <p>
+          To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".
+        </p>
+        <div class="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Dropdowns</h2>
+        <p>
+          The .dropdown-header class is used to add headers inside the dropdown menu:
+        </p>
+        <div class="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            Dropdown button
+          </button>
+          <div class="dropdown-menu">
+            <h5 class="dropdown-header">Dropdown header</h5>
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+            <h5 class="dropdown-header">Dropdown header</h5>
+            <a class="dropdown-item" href="#">Another link</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Dropdown Split Buttons</h2>
+        <div class="btn-group">
+          <button type="button" class="btn btn-primary">Primary</button>
+          <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary">Secondary</button>
+          <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-success">Success</button>
+          <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-info">Info</button>
+          <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-warning">Warning</button>
+          <button type="button" class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+          </div>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown"></button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>15-Cards</h3>
+      <div class="container">
+        <h2>Card Header and Footer</h2>
+        <div class="card">
+          <div class="card-header">Header</div>
+          <div class="card-body">Content</div>
+          <div class="card-footer">Footer</div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Cards with Contextual Classes</h2>
+        <div class="card">
+          <div class="card-body">Basic card</div>
+        </div>
+        <br />
+        <div class="card bg-primary text-white">
+          <div class="card-body">Primary card</div>
+        </div>
+        <br />
+        <div class="card bg-success text-white">
+          <div class="card-body">Success card</div>
+        </div>
+        <br />
+        <div class="card bg-info text-white">
+          <div class="card-body">Info card</div>
+        </div>
+        <br />
+        <div class="card bg-warning text-white">
+          <div class="card-body">Warning card</div>
+        </div>
+        <br />
+        <div class="card bg-danger text-white">
+          <div class="card-body">Danger card</div>
+        </div>
+        <br />
+        <div class="card bg-secondary text-white">
+          <div class="card-body">Secondary card</div>
+        </div>
+        <br />
+        <div class="card bg-dark text-white">
+          <div class="card-body">Dark card</div>
+        </div>
+        <br />
+        <div class="card bg-light text-dark">
+          <div class="card-body">Light card</div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Card titles, text, and links</h2>
+        <p>
+          Use .card-title to add card titles to any heading element. The .card-text class is used to remove bottom margins for a p element if it is the last child (or the only one) in card-body. The .card-link class adds a blue color to any link, and
+          a hover effect.
+        </p>
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some example text. Some example text.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Card Image</h2>
+        <p>Image at the top (card-img-top):</p>
+        <div class="card" style="width: 400px;">
+          <img class="card-img-top" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width: 100%;" />
+          <div class="card-body">
+            <h4 class="card-title">John Doe</h4>
+            <p class="card-text">
+              Some example text some example text. John Doe is an architect and engineer
+            </p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+        </div>
+        <br />
+
+        <p>Image at the bottom (card-img-bottom):</p>
+        <div class="card" style="width: 400px;">
+          <div class="card-body">
+            <h4 class="card-title">Jane Doe</h4>
+            <p class="card-text">
+              Some example text some example text. Jane Doe is an architect and engineer
+            </p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+          <img class="card-img-bottom" src="https://www.w3schools.com/bootstrap4/img_avatar1.png" alt="Card image" style="width: 100%;" />
+        </div>
+      </div>
+      <div class="container">
+        <h2>Card Deck</h2>
+        <p>
+          The .card-deck class creates an
+          <strong>equal height and width</strong> grid of cards. The layout will automatically adjust as you insert more cards.
+        </p>
+        <p>
+          In this example we have added extra content to the first card, to make it taller. Notice how the other cards follow.
+        </p>
+        <p><strong>Note:</strong> The cards are displayed vertically on small screens (less than 576px):</p>
+        <div class="card-deck">
+          <div class="card bg-primary">
+            <div class="card-body text-center">
+              <p class="card-text">Some text inside the first card</p>
+              <p class="card-text">Some more text to increase the height</p>
+              <p class="card-text">Some more text to increase the height</p>
+              <p class="card-text">Some more text to increase the height</p>
+            </div>
+          </div>
+          <div class="card bg-warning">
+            <div class="card-body text-center">
+              <p class="card-text">Some text inside the second card</p>
+            </div>
+          </div>
+          <div class="card bg-success">
+            <div class="card-body text-center">
+              <p class="card-text">Some text inside the third card</p>
+            </div>
+          </div>
+          <div class="card bg-danger">
+            <div class="card-body text-center">
+              <p class="card-text">Some text inside the fourth card</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>14-List groups</h3>
+      <div class="container">
+        <h2>Active Item in a List Group</h2>
+        <ul class="list-group">
+          <li class="list-group-item active">Active item</li>
+          <li class="list-group-item">Second item</li>
+          <li class="list-group-item">Third item</li>
+        </ul>
+      </div>
+      <div class="container mt-3">
+        <h2>List Group With Badges</h2>
+        <p>
+          Combine .badge classes with utility/helper classes to add badges inside the list group:
+        </p>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Inbox
+            <span class="badge badge-primary badge-pill">12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Ads
+            <span class="badge badge-primary badge-pill">50</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            Junk
+            <span class="badge badge-primary badge-pill">99</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>13-Pagination</h3>
+      <div class="container">
+        <h2>Pagination - Sizing</h2>
+        <p>
+          Add class .pagination-lg for larger blocks or .pagination-sm for smaller blocks.
+        </p>
+
+        <p>Large:</p>
+        <ul class="pagination pagination-lg">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+
+        <p>Default:</p>
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+
+        <p>Small:</p>
+        <ul class="pagination pagination-sm">
+          <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>12-Spinners</h3>
+      <div class="container">
+        <h2>Colored Spinners</h2>
+        <p>Use any <strong>text color utilites</strong> to add a color to the spinner:</p>
+
+        <div class="spinner-border text-muted"></div>
+        <div class="spinner-border text-primary"></div>
+        <div class="spinner-border text-success"></div>
+        <div class="spinner-border text-info"></div>
+        <div class="spinner-border text-warning"></div>
+        <div class="spinner-border text-danger"></div>
+        <div class="spinner-border text-secondary"></div>
+        <div class="spinner-border text-dark"></div>
+        <div class="spinner-border text-light"></div>
+      </div>
+      <div class="container">
+        <h2>Growing Spinners</h2>
+        <p>Use the <code>.spinner-grow</code> class if you want the spinner/loader to grow instead of "spin":</p>
+
+        <div class="spinner-grow text-muted"></div>
+        <div class="spinner-grow text-primary"></div>
+        <div class="spinner-grow text-success"></div>
+        <div class="spinner-grow text-info"></div>
+        <div class="spinner-grow text-warning"></div>
+        <div class="spinner-grow text-danger"></div>
+        <div class="spinner-grow text-secondary"></div>
+        <div class="spinner-grow text-dark"></div>
+        <div class="spinner-grow text-light"></div>
+      </div>
+      <div class="container">
+        <h2>Spinner Buttons</h2>
+        <p>Add spinners to buttons:</p>
+
+        <button class="btn btn-primary">
+          <span class="spinner-border spinner-border-sm"></span>
+        </button>
+
+        <button class="btn btn-primary">
+          <span class="spinner-border spinner-border-sm"></span>
+          Loading..
+        </button>
+
+        <button class="btn btn-primary" disabled>
+          <span class="spinner-border spinner-border-sm"></span>
+          Loading..
+        </button>
+
+        <button class="btn btn-primary" disabled>
+          <span class="spinner-grow spinner-grow-sm"></span>
+          Loading..
+        </button>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>11-Progressbar</h3>
+      <div class="container">
+        <h2>Progress Bar With Label</h2>
+        <div class="progress">
+          <div class="progress-bar" style="width: 70%;">70%</div>
+        </div>
+      </div>
+      <div class="container">
+        <h2>Striped Progress Bars</h2>
+        <p>
+          The .progress-bar-striped class adds stripes to the progress bars:
+        </p>
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped" style="width: 30%;"></div>
+        </div>
+        <br />
+        <div class="progress">
+          <div class="progress-bar bg-success progress-bar-striped" style="width: 40%;"></div>
+        </div>
+        <br />
+        <div class="progress">
+          <div class="progress-bar bg-info progress-bar-striped" style="width: 50%;"></div>
+        </div>
+        <br />
+        <div class="progress">
+          <div class="progress-bar bg-warning progress-bar-striped" style="width: 60%;"></div>
+        </div>
+        <br />
+        <div class="progress">
+          <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 70%;"></div>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>10-Badges</h3>
+      <div class="container">
+        <h2>Badges</h2>
+        <h1>Example heading <span class="badge badge-secondary">New</span></h1>
+        <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+        <h3>Example heading <span class="badge badge-secondary">New</span></h3>
+        <h4>Example heading <span class="badge badge-secondary">New</span></h4>
+        <h5>Example heading <span class="badge badge-secondary">New</span></h5>
+        <h6>Example heading <span class="badge badge-secondary">New</span></h6>
+      </div>
+      <div class="container">
+        <h2>Pill Badges</h2>
+        <span class="badge badge-pill badge-primary">Primary</span>
+        <span class="badge badge-pill badge-secondary">Secondary</span>
+        <span class="badge badge-pill badge-success">Success</span>
+        <span class="badge badge-pill badge-danger">Danger</span>
+        <span class="badge badge-pill badge-warning">Warning</span>
+        <span class="badge badge-pill badge-info">Info</span>
+        <span class="badge badge-pill badge-light">Light</span>
+        <span class="badge badge-pill badge-dark">Dark</span>
+      </div>
+      <div class="container">
+        <h2>Badge inside a Button</h2>
+        <button type="button" class="btn btn-primary">Messages <span class="badge badge-light">4</span></button>
+        <button type="button" class="btn btn-danger">Notifications <span class="badge badge-light">7</span></button>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>9-Buttons</h3>
+      <div class="container">
+        <h2>Button Styles</h2>
+        <button type="button" class="btn">Basic</button>
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-link">Link</button>
+      </div>
+      <div class="container">
+        <h2>Button Elements</h2>
+        <a href="#" class="btn btn-info" role="button">Link Button</a>
+        <button type="button" class="btn btn-info">Button</button>
+        <input type="button" class="btn btn-info" value="Input Button" />
+        <input type="submit" class="btn btn-info" value="Submit Button" />
+      </div>
+      <div class="container">
+        <h2>Button Outline</h2>
+        <button type="button" class="btn btn-outline-primary">Primary</button>
+        <button type="button" class="btn btn-outline-secondary">
+          Secondary
+        </button>
+        <button type="button" class="btn btn-outline-success">Success</button>
+        <button type="button" class="btn btn-outline-info">Info</button>
+        <button type="button" class="btn btn-outline-warning">Warning</button>
+        <button type="button" class="btn btn-outline-danger">Danger</button>
+        <button type="button" class="btn btn-outline-dark">Dark</button>
+        <button type="button" class="btn btn-outline-light text-dark">
+          Light
+        </button>
+      </div>
+
+      <div class="container">
+        <h2>Button Sizes</h2>
+        <button type="button" class="btn btn-primary btn-lg">Large</button>
+        <button type="button" class="btn btn-primary btn-md">Default</button>
+        <button type="button" class="btn btn-primary btn-sm">Small</button>
+      </div>
+      <div class="container">
+        <h2>Block Level Buttons</h2>
+        <button type="button" class="btn btn-primary btn-block">
+          Button 1
+        </button>
+        <button type="button" class="btn btn-success btn-block">
+          Button 2
+        </button>
+        <br />
+
+        <h2>Large Block Level Buttons</h2>
+        <button type="button" class="btn btn-primary btn-lg btn-block">
+          Button 1
+        </button>
+        <button type="button" class="btn btn-success btn-lg btn-block">
+          Button 2
+        </button>
+        <br />
+
+        <h2>Small Block Level Buttons</h2>
+        <button type="button" class="btn btn-primary btn-sm btn-block">
+          Button 1
+        </button>
+        <button type="button" class="btn btn-success btn-sm btn-block">
+          Button 2
+        </button>
+      </div>
+      <div class="container">
+        <h2>Button States</h2>
+        <button type="button" class="btn btn-primary">Primary Button</button>
+        <button type="button" class="btn btn-primary active">
+          Active Primary
+        </button>
+        <button type="button" class="btn btn-primary" disabled>
+          Disabled Primary
+        </button>
+        <a href="#" class="btn btn-primary disabled">Disabled Link</a>
+      </div>
+      <div class="container">
+        <h2>Spinner Buttons</h2>
+        <p>Add spinners to buttons:</p>
+
+        <button class="btn btn-primary">
+          <span class="spinner-border spinner-border-sm"></span>
+        </button>
+
+        <button class="btn btn-primary">
+          <span class="spinner-border spinner-border-sm"></span>
+          Loading..
+        </button>
+
+        <button class="btn btn-primary" disabled>
+          <span class="spinner-border spinner-border-sm"></span>
+          Loading..
+        </button>
+
+        <button class="btn btn-primary" disabled>
+          <span class="spinner-grow spinner-grow-sm"></span>
+          Loading..
+        </button>
+        <div class="container">
+          <h2>Button Group</h2>
+          <p>The .btn-group class creates a button group:</p>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <button type="button" class="btn btn-primary">Sony</button>
+          </div>
+          <div class="btn-group">
+            <button type="button" class="btn btn-primary">Apple</button>
+            <button type="button" class="btn btn-primary">Samsung</button>
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Sony
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Tablet</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>8-Alerts</h3>
+      <div class="container">
+        <h2>Alerts</h2>
+        <p>
+          Alerts are created with the .alert class, followed by a contextual color classes:
+        </p>
+        <div class="alert alert-success"><strong>Success!</strong> This alert box could indicate a successful or positive action.</div>
+        <div class="alert alert-info"><strong>Info!</strong> This alert box could indicate a neutral informative change or action.</div>
+        <div class="alert alert-warning"><strong>Warning!</strong> This alert box could indicate a warning that might need attention.</div>
+        <div class="alert alert-danger"><strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.</div>
+        <div class="alert alert-primary"><strong>Primary!</strong> Indicates an important action.</div>
+        <div class="alert alert-secondary"><strong>Secondary!</strong> Indicates a slightly less important action.</div>
+        <div class="alert alert-dark"><strong>Dark!</strong> Dark grey alert.</div>
+        <div class="alert alert-light"><strong>Light!</strong> Light grey alert.</div>
+      </div>
+      <div class="container">
+        <h2>Alert Links</h2>
+        <p>
+          Add the alert-link class to any links inside the alert box to create "matching colored links".
+        </p>
+        <div class="alert alert-success"><strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.</div>
+        <div class="alert alert-info"><strong>Info!</strong> You should <a href="#" class="alert-link">read this message</a>.</div>
+        <div class="alert alert-warning"><strong>Warning!</strong> You should <a href="#" class="alert-link">read this message</a>.</div>
+        <div class="alert alert-danger"><strong>Danger!</strong> You should <a href="#" class="alert-link">read this message</a>.</div>
+        <div class="alert alert-primary"><strong>Primary!</strong> You should <a href="#" class="alert-link">read this message</a>.</div>
+        <div class="alert alert-secondary"><strong>Secondary!</strong> You should <a href="#" class="alert-link">read this message</a>.</div>
+        <div class="alert alert-dark"><strong>Dark!</strong> You should <a href="#" class="alert-link">read this message</a>.</div>
+        <div class="alert alert-light"><strong>Light!</strong> You should <a href="#" class="alert-link">read this message</a>.</div>
+      </div>
+      <div class="container">
+        <h2>Alerts dismissibles</h2>
+        <p>
+          The button with class="close" and data-dismiss="alert" is used to close the alert box.
+        </p>
+        <p>
+          The alert-dismissible class adds some extra padding to the close button.
+        </p>
+        <div class="alert alert-success alert-dismissible fade show">
+          <button type="button" class="close" data-dismiss="alert">
+            &times;
+          </button>
+          <strong>Success!</strong> This alert box could indicate a successful or positive action.
+        </div>
+        <div class="alert alert-info alert-dismissible fade show">
+          <button type="button" class="close" data-dismiss="alert">
+            &times;
+          </button>
+          <strong>Info!</strong> This alert box could indicate a neutral informative change or action.
+        </div>
+        <div class="alert alert-warning alert-dismissible fade show">
+          <button type="button" class="close" data-dismiss="alert">
+            &times;
+          </button>
+          <strong>Warning!</strong> This alert box could indicate a warning that might need attention.
+        </div>
+        <div class="alert alert-danger alert-dismissible fade show">
+          <button type="button" class="close" data-dismiss="alert">
+            &times;
+          </button>
+          <strong>Danger!</strong> This alert box could indicate a dangerous or potentially negative action.
+        </div>
+        <div class="alert alert-primary alert-dismissible fade show">
+          <button type="button" class="close" data-dismiss="alert">
+            &times;
+          </button>
+          <strong>Primary!</strong> Indicates an important action.
+        </div>
+        <div class="alert alert-secondary alert-dismissible fade show">
+          <button type="button" class="close" data-dismiss="alert">
+            &times;
+          </button>
+          <strong>Secondary!</strong> Indicates a slightly less important action.
+        </div>
+        <div class="alert alert-dark alert-dismissible fade show">
+          <button type="button" class="close" data-dismiss="alert">
+            &times;
+          </button>
+          <strong>Dark!</strong> Dark grey alert.
+        </div>
+        <div class="alert alert-light alert-dismissible fade show">
+          <button type="button" class="close" data-dismiss="alert">
+            &times;
+          </button>
+          <strong>Light!</strong> Light grey alert.
+        </div>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>7-Jumbotron</h3>
+      <div class="container">
+        <div class="jumbotron">
+          <h1>class="jumbotron"</h1>
+          <p>
+            Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.
+          </p>
+        </div>
+        <p>This is some text.</p>
+        <p>This is another text.</p>
+      </div>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1>class="jumbotron jumbotron-fluid"</h1>
+          <p>Bootstrap is the most popular HTML, CSS...</p>
+        </div>
+      </div>
+    </div>
+
+    <div style="background-color: aquamarine;">
+      <h3>6-Images</h3>
+      <div class="container">
+        <h2>Rounded Corners</h2>
+        <p>The .rounded class adds rounded corners to an image:</p>
+        <img src="https://www.w3schools.com/bootstrap4/cinqueterre.jpg" class="rounded" alt="Cinque Terre" width="304" height="236" />
+      </div>
+      <div class="container">
+        <h2>Circle</h2>
+        <p>The .rounded-circle class shapes the image to a circle:</p>
+        <img src="https://www.w3schools.com/bootstrap4/cinqueterre.jpg" class="rounded-circle" alt="Cinque Terre" width="304" height="236" />
+      </div>
+      <div class="container">
+        <h2>Thumbnail</h2>
+        <p>The .img-thumbnail class creates a thumbnail of the image:</p>
+        <img src="https://www.w3schools.com/bootstrap4/cinqueterre.jpg" class="img-thumbnail" alt="Cinque Terre" width="304" height="236" />
+      </div>
+
+      <div class="container" style="height: 400px;">
+        <h2>Aligning images</h2>
+        <p>
+          Use the float classes to float the image to the left or to the right:
+        </p>
+        <img src="https://www.w3schools.com/bootstrap4/paris.jpg" class="float-left" alt="Paris" width="304" height="236" />
+        <img src="https://www.w3schools.com/bootstrap4/paris.jpg" class="float-right" alt="Paris" width="304" height="236" />
+      </div>
+      <div class="container">
+        <h2>Centered Image</h2>
+        <p>
+          Center an image by adding the utility classes .mx-auto (margin:auto) and .d-block (display:block) to the image:
+        </p>
+        <img src="https://www.w3schools.com/bootstrap4/paris.jpg" class="mx-auto d-block" style="width: 50%;" />
+      </div>
+      <div class="container">
+        <h2>Image</h2>
+        <p>
+          The .img-fluid class makes the image scale nicely to the parent element (resize the browser window to see the effect):
+        </p>
+        <img class="img-fluid" src="https://www.w3schools.com/bootstrap4/img_chania.jpg" alt="Chania" width="700" height="345" />
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3 style="display: inline-block;">5-Tables</h3>
+      <div class="container">
+        <h2>Basic Table</h2>
+        <p>
+          The .table class adds basic styling (light padding and horizontal dividers) to a table:
+        </p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr />
+      <div class="container">
+        <h2>Striped Rows</h2>
+        <p>The .table-striped class adds zebra-stripes to a table:</p>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr />
+      <div class="container">
+        <h2>Bordered Table</h2>
+        <p>
+          The .table-bordered class adds borders on all sides of the table and the cells:
+        </p>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr />
+      <div class="container">
+        <h2>Hover Rows</h2>
+        <p>
+          The .table-hover class enables a hover state (grey background on mouse over) on table rows:
+        </p>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr />
+      <div class="container">
+        <h2>Hoverable Dark Table</h2>
+        <p>
+          The .table-hover class adds a hover effect (grey background color) on table rows:
+        </p>
+        <table class="table table-striped table-dark table-hover">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <hr />
+      <div class="container">
+        <h2>Contextual Classes</h2>
+        <p>
+          Contextual classes can be used to color the table, table rows or table cells. The classes that can be used are: .table-primary, .table-success, .table-info, .table-warning, .table-danger, .table-active, .table-secondary, .table-light and
+          .table-dark:
+        </p>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Default</td>
+              <td>Defaultson</td>
+              <td>def@somemail.com</td>
+            </tr>
+            <tr class="table-primary">
+              <td>Primary</td>
+              <td>Joe</td>
+              <td>joe@example.com</td>
+            </tr>
+            <tr class="table-success">
+              <td>Success</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+            </tr>
+            <tr class="table-danger">
+              <td>Danger</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+            </tr>
+            <tr class="table-info">
+              <td>Info</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+            </tr>
+            <tr class="table-warning">
+              <td>Warning</td>
+              <td>Refs</td>
+              <td>bo@example.com</td>
+            </tr>
+            <tr class="table-active">
+              <td>Active</td>
+              <td>Activeson</td>
+              <td>act@example.com</td>
+            </tr>
+            <tr class="table-secondary">
+              <td>Secondary</td>
+              <td>Secondson</td>
+              <td>sec@example.com</td>
+            </tr>
+            <tr class="table-light">
+              <td>Light</td>
+              <td>Angie</td>
+              <td>angie@example.com</td>
+            </tr>
+            <tr class="table-dark text-dark">
+              <td>Dark</td>
+              <td>Bo</td>
+              <td>bo@example.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="container">
+        <h2>Responsive Table</h2>
+        <p>
+          The .table-responsive-sg class creates a responsive table which will scroll horizontally on screens that are less than 992px wide.
+        </p>
+        <p>Resize the browser window to see the effect.</p>
+        <div class="table-responsive-lg">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Sex</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Anna</td>
+                <td>Pitt</td>
+                <td>35</td>
+                <td>New York</td>
+                <td>USA</td>
+                <td>Female</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>4-Colors</h3>
+      <div class="container">
+        <h2>Contextual Colors</h2>
+        <p>Use the contextual classes to provide "meaning through colors":</p>
+        <p class="text-muted">class="text-muted" => This text is muted.</p>
+        <p class="text-primary">
+          class="text-primary" => This text is important.
+        </p>
+        <p class="text-success">
+          class="text-success" => This text indicates success.
+        </p>
+        <p class="text-info">
+          class="text-info" => This text represents some information.
+        </p>
+        <p class="text-warning">
+          class="text-warning" => This text represents a warning.
+        </p>
+        <p class="text-danger">
+          class="text-danger" => This text represents danger.
+        </p>
+        <p class="text-secondary">class="text-secondary" => Secondary text.</p>
+        <p class="text-dark">class="text-dark" => This text is dark grey.</p>
+        <p class="text-body">
+          class="text-body" => Default body color (often black).
+        </p>
+        <p class="text-light">
+          class="text-light" => This text is light grey (on white background).
+        </p>
+        <p class="text-white">
+          class="text-white" => This text is white (on white background).
+        </p>
+      </div>
+      <div class="container">
+        <h2>Opacity Text Colors</h2>
+        <p>
+          Add 50% opacity for black or white text with the .text-black-50 or .text-white-50 classes:
+        </p>
+        <p class="text-black-50">
+          Black text with 50% opacity on white background
+        </p>
+        <p class="text-white-50 bg-dark">
+          White text with 50% opacity on black background
+        </p>
+      </div>
+      <div class="container">
+        <h2>Contextual Backgrounds</h2>
+        <p>
+          Use the contextual background classes to provide "meaning through colors".
+        </p>
+        <p>
+          Note that you can also add a .text-* class if you want a different text color:
+        </p>
+        <p class="bg-primary text-white">
+          class="bg-primary text-white" => This text is important.
+        </p>
+        <p class="bg-success text-white">
+          class="bg-success text-white" => This text indicates success.
+        </p>
+        <p class="bg-info text-white">
+          class="bg-info text-white" => This text represents some information.
+        </p>
+        <p class="bg-warning text-white">
+          class="bg-warning text-white" => This text represents a warning.
+        </p>
+        <p class="bg-danger text-white">
+          class="bg-danger text-white" => This text represents danger.
+        </p>
+        <p class="bg-secondary text-white">
+          class="bg-secondary text-white" => Secondary background color.
+        </p>
+        <p class="bg-dark text-white">
+          class="bg-dark text-white" => Dark grey background color.
+        </p>
+        <p class="bg-light text-dark">
+          class="bg-light text-dark" => Light grey background color.
+        </p>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>3-Typography</h3>
+      <div class="container">
+        <h1>Keyboard Inputs</h1>
+        <p>
+          To indicate input that is typically entered via the keyboard, use the kbd element:
+        </p>
+        <p>Use <kbd>ctrl + p</kbd> to open the Print dialog box.</p>
+      </div>
+      <div class="container">
+        <h1>Abbreviations</h1>
+        <p>The abbr element is used to mark up an abbreviation or acronym:</p>
+        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+      </div>
+      <div class="container">
+        <h1>Highlight Text</h1>
+        <p>Use the mark element to <mark>highlight</mark> text.</p>
+      </div>
+      <div class="container">
+        <h1>Blockquotes</h1>
+        <p>
+          The blockquote element is used to present content from another source:
+        </p>
+        <blockquote class="blockquote">
+          <p>
+            For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+          </p>
+          <footer class="blockquote-footer">From WWF's website</footer>
+        </blockquote>
+      </div>
+      <div class="container">
+        <h1>Description Lists</h1>
+        <p>The dl element indicates a description list:</p>
+        <dl>
+          <dt>Coffee</dt>
+          <dd>- black hot drink</dd>
+          <dt>Milk</dt>
+          <dd>- white cold drink</dd>
+        </dl>
+      </div>
+      <div class="container">
+        <h1>Multiple Code Lines</h1>
+        <p>For multiple lines of code, use the pre element:</p>
+        <pre>
+      Text in a pre element
+      is displayed in a fixed-width
+      font, and it preserves
+      both      spaces and
+      line breaks.
+      </pre
+        >
+      </div>
+      <div class="container">
+        <h1>h1 Bootstrap heading (2.5rem = 40px)</h1>
+        <h2>h2 Bootstrap heading (2rem = 32px)</h2>
+        <h3>h3 Bootstrap heading (1.75rem = 28px)</h3>
+        <h4>h4 Bootstrap heading (1.5rem = 24px)</h4>
+        <h5>h5 Bootstrap heading (1.25rem = 20px)</h5>
+        <h6>h6 Bootstrap heading (1rem = 16px)</h6>
+      </div>
+      <div class="container">
+        <h1>Lighter, Secondary Text</h1>
+        <p>
+          The small element is used to create a lighter, secondary text in any heading:
+        </p>
+        <h1>h1 heading <small>secondary text</small></h1>
+        <h2>h2 heading <small>secondary text</small></h2>
+        <h3>h3 heading <small>secondary text</small></h3>
+        <h4>h4 heading <small>secondary text</small></h4>
+        <h5>h5 heading <small>secondary text</small></h5>
+        <h6>h6 heading <small>secondary text</small></h6>
+      </div>
+      <div class="container">
+        <h1>Display Headings</h1>
+        <p>
+          Display headings are used to stand out more than normal headings (larger font-size and lighter font-weight):
+        </p>
+        <h1 class="display-1">h1 Display 1</h1>
+        <h1 class="display-2">h1 Display 2</h1>
+        <h1 class="display-3">h1 Display 3</h1>
+        <h1 class="display-4">h1 Display 4</h1>
+      </div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>3-columns</h3>
+      <h4>automatic</h4>
+      <div class="row">
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+        <div class="col border">.col</div>
+      </div>
+      <h4>defined</h4>
+      <hr />
+      <div class="row">
+        <div class="col-sm-3 border">.col-sm-3</div>
+        <div class="col-sm-3 border">.col-sm-3</div>
+        <div class="col-sm-3 border">.col-sm-3</div>
+        <div class="col-sm-3 border">.col-sm-3</div>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="col-sm-4 border">.col-sm-4</div>
+        <div class="col-sm-8 border">.col-sm-8</div>
+      </div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>2-Responsive containers</h3>
+      <div class="container-sm border">.container-sm</div>
+      <div class="container-md mt-3 border">.container-md</div>
+      <div class="container-lg mt-3 border">.container-lg</div>
+      <div class="container-xl mt-3 border">.container-xl</div>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>1-Basic containers</h3>
+      <div class="container p-3 my-3 border">
+        <h1>My First Bootstrap Page</h1>
+        <p>This container has a border and some extra padding and margins.</p>
+      </div>
+
+      <div class="container p-3 my-3 bg-dark text-white">
+        <h1>My First Bootstrap Page</h1>
+        <p>
+          This container has a dark background color and a white text, and some extra padding and margins.
+        </p>
+      </div>
+
+      <div class="container p-3 my-3 bg-primary text-white">
+        <h1>My First Bootstrap Page</h1>
+        <p>
+          This container has a blue background color and a white text, and some extra padding and margins.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
