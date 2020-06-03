@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>w3school advanced css</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div style="background-color: aquamarine;">
+      <h3>2-Paragraphs</h3>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>1-Transforms</h3>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>2-Paragraphs</h3>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>1-Transforms</h3>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>2-Paragraphs</h3>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>1-Transforms</h3>
+    </div>
+    <div style="background-color: aquamarine;">
+      <h3>2-Paragraphs</h3>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>1-Transforms</h3>
+    </div>
+    <div style="background-color: aquamarine; overflow: auto;">
+      <h3>2-BoxSizing</h3>
+      <style>
+        .onlybox {
+          width: 300px;
+          height: 200px;
+          background-color: springgreen;
+          position: relative;
+        }
+        .center p {
+          margin: 0;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .boxpluspadding {
+          width: 300px;
+          height: 200px;
+          background-color: springgreen;
+          border: 1px solid black;
+          padding: 50px;
+          background-clip: content-box;
+          margin: 50px;
+          outline: 1px dashed blue;
+          outline-offset: 50px;
+          position: relative;
+        }
+        .withboxsizing {
+          width: 300px;
+          height: 200px;
+          background-color: springgreen;
+          border: 1px solid black;
+          padding: 50px;
+          background-clip: content-box;
+          margin: 50px;
+          outline: 1px dashed blue;
+          outline-offset: 50px;
+          position: relative;
+          box-sizing: border-box;
+        }
+      </style>
+      <div class="onlybox center"><p>Only box</p></div>
+      <div class="boxpluspadding center"><p>With margin and padding</p></div>
+      <div class="withboxsizing center"><p>box-sizing: border-box</p></div>
+    </div>
+    <div style="background-color: rgb(14, 199, 212);">
+      <h3>1-Transforms</h3>
+      <style>
+        div.translate {
+          width: 300px;
+          height: 100px;
+          background-color: yellow;
+          border: 1px solid black;
+          -ms-transform: translate(50px, 100px); /* IE 9 */
+          transform: translate(50px, 100px); /* Standard syntax */
+        }
+      </style>
+      <h1>The translate() Method</h1>
+      <p>The translate() method moves an element from its current position:</p>
+
+      <div class="translate">
+        This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+      </div>
+    </div>
+  </body>
+</html>
