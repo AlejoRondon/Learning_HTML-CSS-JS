@@ -1,3 +1,7 @@
+console.log(`****************************************************************************`)
+console.log(`***************** STARTING fundamentals.js *********************************`)
+console.log(`****************************************************************************`)
+
 //? 'Global and local variables'
 console.log("'Global and local variables'")
 
