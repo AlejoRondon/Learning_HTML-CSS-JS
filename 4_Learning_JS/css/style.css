@@ -1,32 +1,59 @@
-/* code {
+code {
   font-family: 'Source Code Pro', monospace;
   /* color: crimson;
   background-color: #f1f1f1;
   padding: 2px;
   font-size: 105%; */
-} */
+}
 
 html,
 body {
   min-height: 100%;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #ececec;
-  background: linear-gradient(135deg, #0f55e4, #0a3a9c);
+  background: linear-gradient(135deg, #ececec, #0a3a9c);
   color: #fff;
   /*padding: 0.5em 1em;*/
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: center;
 }
 
-.console {
+.image-wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
+.image-wrapper img {
+  position: absolute;
+  padding: 0px 0px;
+  margin: 30px 20px;
+  width: 9%;
+  height: auto;
+  /* height: 30%; */
+  z-index: 1000;
+}
+
+#console {
+  /* display: none; */
   position: fixed;
-  font-family:  'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace;
   color: #fff;
   width: calc(100% - 3em);
-  max-width: 100%;
+  /* min-width: 90%; */
+  max-width: 80%;
   max-height: calc(100% - 3em);
   overflow-y: auto;
+  /* margin-left: auto; */
+  /* float: right; */
   margin: 1em 1em;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
@@ -38,7 +65,7 @@ body {
 }
 
 .console-input {
-  font-family:  'Source Code Pro', monospace;
+  font-family: 'Source Code Pro', monospace;
   background-color: transparent;
   border: none;
   outline: none;
@@ -59,6 +86,9 @@ body {
   vertical-align: top;
 }
 
+div#outputs {
+  overflow: scroll;
+}
 .output-cmd:before {
   content: '> ';
   color: #fc3565;
@@ -77,8 +107,10 @@ body {
   display: block;
 }
 
-.console-inner {
+#console-inner {
   padding: 0.3em 1.1em;
+  display: flex;
+  justify-content: center;
 }
 
 .output-text,
@@ -86,7 +118,10 @@ body {
   display: block;
   white-space: pre;
 }
-
+#outputs {
+  /* background-color: #46f01d; */
+  width: 70%;
+}
 #outputs div {
   opacity: 0.85;
 }

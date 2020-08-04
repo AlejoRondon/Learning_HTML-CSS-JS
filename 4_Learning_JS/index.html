@@ -7,16 +7,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
   </head>
-  <body>
-    <body id="particles-js">
-      <div class="console">
-        <div class="console-inner">
-          <div id="outputs"></div>
-          <!-- <div class="output-cmd"><textarea autofocus class="console-input" placeholder="Type command..."></textarea></div> -->
-        </div>
+  <body id="particles-js">
+    <div class="image-wrapper">
+      <img src="images/alejorondon.svg" alt="" />
+      <!-- width="50%" height="50%"  -->
+    </div>
+    <div id="console">
+      <div id="console-inner">
+        <div id="outputs"></div>
+        <!-- <div class="output-cmd"><textarea autofocus class="console-input" placeholder="Type command..."></textarea></div> -->
       </div>
-    </body>
-    <code id="log"></code>
+    </div>
+    <!-- <div> -->
+    <!-- style="background-color: aliceblue; height: 100vh; width: 100vw;"> -->
+    <!-- <h1>hola como estas</h1> -->
+    <!-- </div> -->
+
+    <!-- <code id="log"><h1>hola</h1></code> -->
     <!-- JQUERY -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/8.1.0/markdown-it.min.js"></script>
@@ -26,7 +33,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 
     <script src="js/log2html_snippet.js"></script>
-    <script src="js/fundamentals.js"></script>
-    <script src="js/strings.js"></script>
+    <script src="js/scrollTopBottomSnippet.js"></script>
+    <!-- <script src="js/fundamentals.js"></script> -->
+    <!-- <script src="js/strings.js"></script> -->
+    <!-- <script src="js/regex.js"></script> -->
+    <!-- <script src="js/regex.js"></script> -->
+    <!-- <script src="js/arrays.js"></script> -->
+    <!-- <script src="js/functions.js"></script> -->
+    <script src="js/objects.js"></script>
+    <script>
+      // lines to move the scroll to the bottom
+      $('#console').scrollTop($('#console')[0].scrollHeight)
+      // scrollSmoothToBottom('console') //from js/scrollTopBottomSnippet.js
+    </script>
   </body>
 </html>
